@@ -1,0 +1,31 @@
+{
+	"name": "Meow",
+	"description": "You shouldn't be able to see this. This power meows every so often and when hit, hisses",
+	"hidden": true,
+	"type": "origins:multiple",
+	"ambient": {
+		"type": "origins:action_over_time",
+		"interval": 100,
+		"entity_action": {
+			"type": "origins:chance",
+			"chance": 0.1,
+			"action": {
+				"type": "origins:execute_command",
+				"command": "playsound minecraft:entity.cat.ambient player @a ~ ~ ~ 0.6 1.5"
+			}
+		},
+		"condition": {
+			"type": "origins:sneaking",
+			"inverted":true
+		}
+	},
+	"on_hit": {
+		"type": "origins:self_action_when_hit",
+		"cooldown": 0,
+		"hud_render": {"should_render": false},
+		"entity_action": {
+			"type": "origins:execute_command",
+			"command": "playsound minecraft:entity.cat.hurt player @a ~ ~ ~ 1 1.5"
+		}
+	}
+}

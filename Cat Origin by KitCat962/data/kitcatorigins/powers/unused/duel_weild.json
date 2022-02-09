@@ -1,0 +1,33 @@
+{
+	"name": "Duel Weild",
+	"description": "You know how to attack twice while having a sword in both hands",
+	"type": "origins:action_on_hit",
+	"bientity_action": {
+		"type": "origins:delay",
+		"ticks": 10,
+		"action": {
+			"type": "origins:and",
+			"actions": [
+				{
+					"type": "origins:actor_action",
+					"action": {
+						"type": "origins:swing_hand",
+						"hand": "OFF_HAND"
+					}
+				},
+				{
+					"type": "origins:damage",
+					"amount": 5,
+					"source": {
+						"name": "generic.player"
+					}
+				}
+			]
+		}
+	},
+	"damage_condition": {
+		"type": "origins:name",
+		"name": "generic.player",
+		"inverted": true
+	}
+}

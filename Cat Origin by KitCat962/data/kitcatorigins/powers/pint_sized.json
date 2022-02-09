@@ -1,0 +1,89 @@
+{
+	"name": "Pint Sized",
+	"description": "You are smaller than others, merely 1 block tall.",
+	"type": "origins:action_on_callback",
+	"entity_action_choose": {
+		"type": "origins:and",
+		"actions": [
+			{
+				"type": "origins:execute_command",
+				"command": "scale delay set pehkui:height 0 @s"
+			},
+			{
+				"type": "origins:execute_command",
+				"command": "scale delay set pehkui:width 0 @s"
+			},
+			{
+				"type": "origins:execute_command",
+				"command": "scale set pehkui:height 0.5 @s"
+			},
+			{
+				"type": "origins:execute_command",
+				"command": "scale set pehkui:width 0.5 @s"
+			}
+		]
+	},
+	"entity_action_added": {
+		"type": "origins:and",
+		"actions": [
+			{
+				"type": "origins:execute_command",
+				"command": "scale delay set pehkui:height 0 @s"
+			},
+			{
+				"type": "origins:execute_command",
+				"command": "scale delay set pehkui:width 0 @s"
+			},
+			{
+				"type": "origins:execute_command",
+				"command": "scale set pehkui:height 0.5 @s"
+			},
+			{
+				"type": "origins:execute_command",
+				"command": "scale set pehkui:width 0.5 @s"
+			}
+		]
+	},
+	"entity_action_respawned": {
+		"type": "origins:and",
+		"actions": [
+			{
+				"type": "origins:execute_command",
+				"command": "scale delay set pehkui:height 0 @s"
+			},
+			{
+				"type": "origins:execute_command",
+				"command": "scale delay set pehkui:width 0 @s"
+			},
+			{
+				"type": "origins:execute_command",
+				"command": "scale set pehkui:height 0.5 @s"
+			},
+			{
+				"type": "origins:execute_command",
+				"command": "scale set pehkui:width 0.5 @s"
+			}
+		]
+	},
+	"entity_action_removed": {
+		"type": "origins:and",
+		"actions": [
+			{
+				"type": "origins:execute_command",
+				"command": "scale delay set pehkui:height 1 @s"
+			},
+			{
+				"type": "origins:execute_command",
+				"command": "scale delay set pehkui:width 1 @s"
+			},
+			{
+				"type": "origins:execute_command",
+				"command": "scale set pehkui:height 1 @s"
+			},
+			{
+				"type": "origins:execute_command",
+				"command": "scale set pehkui:width 1 @s"
+			}
+		]
+	}
+}

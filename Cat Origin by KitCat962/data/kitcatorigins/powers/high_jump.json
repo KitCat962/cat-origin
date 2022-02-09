@@ -1,0 +1,16 @@
+{
+	"name": "High Jump",
+	"description": "While sneaking, you can jump higher than normal",
+	"type": "origins:modify_jump",
+	"modifier": {
+		"operation": "multiply_total",
+		"value": 1.5
+	},
+	"entity_action": {
+		"type": "origins:execute_command",
+		"command": "particle cloud ~ ~ ~ 0.3 0.3 0.3 0.01 16 normal @a"
+	},
+	"condition": {
+		"type": "origins:sneaking"
+	}
+}

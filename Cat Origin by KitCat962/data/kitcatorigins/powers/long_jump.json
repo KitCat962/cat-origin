@@ -1,0 +1,32 @@
+{
+	"name": "Long Jump",
+	"description": "While sprinting, you can jump further than normal",
+	"type": "origins:modify_jump",
+	"entity_action": {
+		"type": "origins:and",
+		"actions": [
+			{
+				"type": "origins:add_velocity",
+				"space": "local",
+				"z": 0.5
+			},
+			{
+				"type": "origins:add_velocity",
+				"y": 0.8
+			}
+		]
+	},
+	"condition": {
+		"type": "origins:and",
+		"conditions": [
+			{
+				"type": "origins:sprinting"
+			},
+			{
+				"type": "origins:sneaking",
+				"inverted": true
+			}
+		]
+	}
+
+}

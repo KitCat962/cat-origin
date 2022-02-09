@@ -1,0 +1,150 @@
+{
+	"name": "Walljump",
+	"description": "Cling to and jump off of walls by holding sneak.",
+	"type": "origins:multiple",
+	"onsneak":{
+		"type":"origins:action_over_time",
+		"interval":1,
+		"condition":{
+			"type":"origins:and",
+			"conditions":[
+				{"type":"origins:sneaking"},
+				{
+					"type": "origins:on_block",
+					"inverted":true
+				},
+				{
+					"type":"origins:or",
+					"conditions":[
+						{
+							"type": "origins:block_collision",
+							"offset_x": 0.1,
+							"offset_y": 0,
+							"offset_z": 0.1
+						},
+						{
+							"type": "origins:block_collision",
+							"offset_x": -0.1,
+							"offset_y": 0,
+							"offset_z": -0.1
+						}
+					]
+				},
+				{
+					"type": "origins:fluid_height",
+					"fluid": "minecraft:water",
+					"comparison": "<",
+					"compare_to": 0.2
+				},
+				{
+					"type": "origins:creative_flying",
+					"inverted":true
+				}
+			]
+		},
+		"entity_action":{
+			"type":"origins:and",
+			"actions":[
+				{
+					"type":"origins:if_else",
+					"condition":{
+						"type":"origins:resource",
+						"resource":"*:walljump_timer",
+						"comparison":"==",
+						"compare_to":0
+					},
+					"if_action":{
+						"type":"origins:add_velocity",
+						"x":0,
+						"y":-0.005,
+						"z":0,
+						"set":false
+					},
+					"else_action":{
+						"type":"origins:add_velocity",
+						"x":0,
+						"y":0,
+						"z":0,
+						"set":true
+					}
+				},
+				{
+					"type":"origins:change_resource",
+					"resource":"*:walljump_timer",
+					"change":-1
+				}
+			]
+		},
+		"falling_action":{
+			"type": "origins:and",
+			"actions": [
+				{
+					"type":"origins:if_else",
+					"condition":{
+						"type":"origins:resource",
+						"resource":"*:walljump_timer",
+						"comparison":"!=",
+						"compare_to":0
+					},
+					"if_action":{
+						"type": "origins:and",
+						"actions": [
+							{
+								"type":"origins:add_velocity",
+								"z":0.4,
+								"space": "local"
+							},
+							{
+								"type":"origins:add_velocity",
+								"y":0.8
+							}
+						]
+					}
+				},
+				{
+					"type":"origins:change_resource",
+					"resource":"*:walljump_timer",
+					"change":9999
+				}
+			]
+		}
+	},
+	"stop_move":{
+		"type": "origins:modify_air_speed",
+		"modifier": {
+			"operation": "multiply_base",
+			"value": -1
+		},
+		"condition":{
+			"type":"origins:and",
+			"conditions":[
+				{
+					"type": "origins:power_active",
+					"power": "kitcatorigins:walljump_onsneak"
+				},
+				{
+					"type":"origins:resource",
+					"resource":"*:walljump_timer",
+					"comparison":"!=",
+					"compare_to":0
+				}
+			]
+		}
+	},
+	"stop_fall":{
+		"type": "origins:modify_falling",
+		"velocity": 0.0,
+		"take_fall_damage": false,
+		"condition":{
+			"type": "origins:power_active",
+			"power": "kitcatorigins:walljump_onsneak"
+		}
+	},
+	"timer":{
+		"type":"origins:resource",
+		"min":0,
+		"max":40,
+		"start_value":40,
+		"hud_render":{"should_render":false}
+	}
+}

@@ -1,0 +1,28 @@
+{
+	"name": "Cat",
+	"description": "A decendant of the common housecat, this origin sacrifices combat ability with a vast quantity of movement abilities",
+	"icon": "minecraft:salmon",
+	"impact": 2,
+	"powers": [
+		"kitcatorigins:high_jump",
+		"kitcatorigins:long_jump",
+		"kitcatorigins:walljump",
+		"kitcatorigins:crawl",
+		"kitcatorigins:pint_sized",
+		"kitcatorigins:fragile",
+		"kitcatorigins:lightweight",
+		"kitcatorigins:weak",
+		"kitcatorigins:quickattack",
+		"kitcatorigins:fast_metabolism",
+		"kitcatorigins:fishy_palate",
+		"kitcatorigins:quickfooted",
+		"kitcatorigins:nimble",
+		"kitcatorigins:dark_sight",
+		"origins:scare_creepers",
+		"kitcatorigins:pickup",
+		"kitcatorigins:weak_grip",
+		"kitcatorigins:hydrophobia",
+		"kitcatorigins:meow"
+	],
+	"unchoosable": false
+}

@@ -1,0 +1,43 @@
+{
+	"name": "Hydrophobia",
+	"description": "You fear water for no apperent reason. If it ever touches you, your visoin starts to distort",
+	"type": "origins:action_over_time",
+	"interval": 1,
+	"entity_action": {
+		"type": "origins:apply_effect",
+		"effect": {
+			"effect": "minecraft:nausea",
+			"amplifier": 9,
+			"is_ambient": true,
+			"show_particles": false,
+			"show_icon": false
+		}
+	},
+	"condition": {
+		"type":"origins:and",
+		"conditions":[
+			{
+				"type": "origins:or",
+				"conditions": [
+					{
+						"type": "origins:fluid_height",
+						"fluid": "minecraft:water",
+						"comparison": ">",
+						"compare_to": 0
+					},
+					{
+						"type": "origins:in_rain"
+					}
+				]
+			},
+			{
+				"type":"origins:enchantment",
+				"enchantment":"origins:water_protection",
+				"calculation":"sum",
+				"comparison":">=",
+				"compare_to":2,
+				"inverted":true
+			}
+		]
+	}
+}

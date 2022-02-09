@@ -1,0 +1,22 @@
+{
+	"name": "Crawl",
+	"description": "You can crawl on the ground at the press of a button (while sprinting)",
+	"type": "origins:multiple",
+	"onsneak": {
+		"type": "origins:toggle",
+		"active_by_default": false,
+		"key": {"key": "key.origins.secondary_active"},
+		"retain_state":false,
+		"condition":{
+			"type":"origins:and",
+			"conditions":[{"type":"origins:sprinting"},{"type":"origins:on_block"}]
+		}
+	},
+	"swim": {
+		"type": "origins:swimming",
+		"condition": {
+			"type": "origins:power_active",
+			"power": "kitcatorigins:crawl_onsneak"
+		}
+	}
+}

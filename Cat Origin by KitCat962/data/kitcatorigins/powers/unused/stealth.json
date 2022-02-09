@@ -1,0 +1,73 @@
+{
+	"name": "Stealth",
+	"type": "origins:multiple",
+	"bar": {
+		"type": "origins:resource",
+		"min": 0,
+		"max": 10,
+		"hud_render": {
+			"should_render": true,
+			"sprite_location": "origins:textures/gui/community/spiderkolo/resource_bar_01.png",
+			"bar_index": 9,
+			"condition": {
+				"type": "origins:resource",
+				"resource": "kitcatorigins:stealth_bar",
+				"comparison": ">",
+				"compare_to": 0
+			}
+		}
+	},
+	"invis": {
+		"type": "origins:model_color",
+		"alpha": 0.1,
+		"condition": {
+			"type": "origins:resource",
+			"resource": "kitcatorigins:stealth_bar",
+			"comparison": "==",
+			"compare_to": 10
+		}
+	},
+	"slowness": {
+		"type": "origins:conditioned_attribute",
+		"modifier": {
+			"attribute": "minecraft:generic.movement_speed",
+			"operation": "multiply_total",
+			"value": -0.9
+		},
+		"tick_rate": 5,
+		"condition": {
+			"type": "origins:resource",
+			"resource": "kitcatorigins:stealth_bar",
+			"comparison": "==",
+			"compare_to": 10
+		}
+	},
+	"sneakset": {
+		"type": "origins:action_over_time",
+		"interval": 1,
+		"entity_action": {
+			"type": "origins:change_resource",
+			"resource": "kitcatorigins:stealth_bar",
+			"change": 1
+		},
+		"falling_action": {
+			"type": "origins:change_resource",
+			"resource": "kitcatorigins:stealth_bar",
+			"change": -10
+		},
+		"condition": {
+			"type": "origins:and",
+			"conditions": [
+				{
+					"type": "origins:sneaking"
+				},
+				{
+					"type": "origins:block_collision",
+					"offset_y": -0.1,
+					"offset_x": 0,
+					"offset_z": 0
+				}
+			]
+		}
+	}
+}

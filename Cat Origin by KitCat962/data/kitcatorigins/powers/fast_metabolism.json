@@ -1,0 +1,9 @@
+{
+	"name": "Fast Metabolism",
+	"description": "Your body burns through food faster than others",
+	"type": "origins:modify_exhaustion",
+	"modifier": {
+		"operation": "multiply_total",
+		"value": 3.0
+	}
+}

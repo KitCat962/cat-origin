@@ -1,0 +1,92 @@
+{
+	"name": "Fishy Palate",
+	"description": "You are able to get more out of raw fish than others would",
+	"type": "origins:multiple",
+	"cod":{
+		"type": "origins:modify_food",
+		"item_condition": {
+			"type": "origins:ingredient",
+			"ingredient": {
+				"item": "minecraft:cod"
+			}
+		},
+		"food_modifier": {
+			"operation": "addition",
+			"value": 5
+		},
+		"saturation_modifier": {
+			"operation": "addition",
+			"value": 0.75
+		}
+	},
+	"salmon":{
+		"type": "origins:modify_food",
+		"item_condition": {
+			"type": "origins:ingredient",
+			"ingredient": {
+				"item": "minecraft:salmon"
+			}
+		},
+		"food_modifier": {
+			"operation": "addition",
+			"value": 7
+		},
+		"saturation_modifier": {
+			"operation": "addition",
+			"value": 0.75
+		}
+	},
+	"tropical":{
+		"type": "origins:modify_food",
+		"item_condition": {
+			"type": "origins:ingredient",
+			"ingredient": {
+				"item": "minecraft:tropical_fish"
+			}
+		},
+		"food_modifier": {
+			"operation": "addition",
+			"value": 3
+		},
+		"saturation_modifier": {
+			"operation": "addition",
+			"value": 2.4
+		}
+	},
+	"else":{
+		"type": "origins:modify_food",
+		"item_condition": {
+			"type": "origins:and",
+			"conditions":[
+				{
+					"type": "origins:ingredient",
+					"ingredient": {
+						"item": "minecraft:cod"
+					}
+				},
+				{
+					"type": "origins:ingredient",
+					"ingredient": {
+						"item": "minecraft:salmon"
+					}
+				},
+				{
+					"type": "origins:ingredient",
+					"ingredient": {
+						"item": "minecraft:tropical_fish"
+					}
+				}
+			],
+			"inverted":true
+		},
+		"food_modifier": {
+			"operation": "multiply_base",
+			"value": -0.5,
+			"name": "reduce all others by half"
+		},
+		"saturation_modifier": {
+			"operation": "multiply_base",
+			"value": -0.5
+		}
+	}
+}

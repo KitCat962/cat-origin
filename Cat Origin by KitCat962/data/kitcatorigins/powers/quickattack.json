@@ -1,0 +1,10 @@
+{
+	"name":"Quick Attack",
+	"description": "You attack 30% faster.",
+	"type":"origins:attribute",
+	"modifier": {
+		"attribute": "minecraft:generic.attack_speed",
+		"operation": "multiply_total",
+		"value": 0.3
+	}
+}

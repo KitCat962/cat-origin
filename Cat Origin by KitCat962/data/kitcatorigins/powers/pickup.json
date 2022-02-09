@@ -1,0 +1,29 @@
+{
+	"name": "Pickup",
+	"description": "You can ride other players by right clicking them.",
+	"type":"origins:multiple",
+	"extraorigins":{
+		"type": "extraorigins:start_riding",
+		"key": {
+			"key": "key.use"
+		}
+	},
+	"fallback":{
+		"type":"origins:action_on_entity_use",
+		"bientity_action":{
+			"type": "origins:mount"
+		},
+		"condition":{
+			"type": "origins:power",
+			"power": "kitcatorigins:pickup_extraorigins",
+			"inverted":true
+		},
+		"bientity_condition":{
+			"type": "origins:target_condition",
+			"condition": {
+				"type": "origins:entity_type",
+				"entity_type": "minecraft:player"
+			}
+		}
+	}
+}

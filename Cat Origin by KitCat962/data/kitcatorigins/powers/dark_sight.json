@@ -1,0 +1,11 @@
+{
+	"name": "Dark Sight",
+	"description": "Your eyes allow you to see in the dark",
+	"type": "origins:night_vision",
+	"strength": 0.5,
+	"condition": {
+		"type": "origins:submerged_in",
+		"fluid": "minecraft:water",
+		"inverted": true
+	}
+}

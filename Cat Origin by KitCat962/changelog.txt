@@ -1,0 +1,104 @@
+0:
+	-lots of changes before I started documenting them
+	-renamed origin to Cat
+	-seperated Cat origin from other origins in same datapack
+	-renamed 'Cat Vision' to 'Dark Sight'
+	-added description to Dark Sight
+	-renamed 'Energy Burner' to 'Fast Metabolism' and added a description
+	-added description to Fishy Palate
+	-added description to Fragile
+	-renamed 'Hates Water' to 'Hydrophobia' and added description
+	-added description to High Jump
+	-added description to Long Jump
+	-removed the hidden Elytra wings power
+	-added description to meow.json
+	-added description to Nimble
+	-added description to Pint Sized
+	--TODO#1: Redo size for Pint Sized
+	-added description to Quickfooted
+	-removed stealth.json from the origin
+	-refactored origin.json, cat.json, raw_fish.json, and all powers to use tabs instead of spaces
+	-refactored all powers to use new namespace
+1:
+	-made origin choosable
+2:
+	-changed the icon from illegal item 'raw_salmon' to 'salmon'
+	--#1 set Pint Sized size to 0.625 from 0.3125
+	-added a name for meow.json and made it hidden
+	--TODO#2: Add walljump power
+	--TODO#3: Prevent using axes for damage
+	--TODO#4: Duel weilding
+	--TODO#5: faster attack speed
+	--TODO#6: prevent shield
+	--TODO#7: nerf fish maybe
+	--#2 added walljump power
+	--TODO#8: find way to fully prevent movement while cling on wall
+	--TODO#9: add crawling (swimming on land)
+	--#9 added crawling
+3:
+	-Dark sight is now actually in the powers list
+	-crawling now actually works.
+	--TODO#10: create a power that is just keybindings
+4:
+	--#6 added Weak Grip power
+	-added tag group swords.json
+	--#4 added Duel Weild
+	-renamed folder to Cat Origin by KitCat962
+	--#4 duel weilding is stupid with the invunerability frames. removing it in favor of #5
+	--#5 you know what? cats arent meant for combat anyways. ignoring
+	--#3 ignoring
+	--TODO#11: walljump needs upwards velocity check
+	--TODO#12: walljump needs generic upwards velocity on release
+	--TODO#13: crawling keybinds need redone
+	--#11 done
+	--#12 done
+	--#13 not the greatest but works
+	--#8 done
+	--#10 NOPE
+5:
+	-removed tag group swords.json as duel weilding isnt going to be implimented
+	--TODO#14: change Hydrophobia from nausea to indipendant screen effect
+	-meow.json now reacts to sneaking instead of unused stealth power
+	--#7 nerfed raw fish from steak equivelent to a bit less than steak
+	-added description to Walljump
+	--TODO#15: With so many movement options, should disabling sheilds still be a thing?
+	-reordered powers in cat.json
+	-added description to origin
+	-updated descriptio of Hydrophobia
+6:
+	-changed the pack.mcmeta to 8
+	--#TODO16: reduce efficiency of foods other than fish
+	--#TODO17: different fish have different purposes
+	--#TODO18: decrease attack and increase attack speed
+	--#16 done
+	--#17 done
+	--#18 added Quickattack and Weak, increasing attack speed by 40% and decreasing damage by 20%
+	-added lightweight which increases knockback taken
+	-made a power that prevents using axes. Not sure if will use
+	-added tag group for axes
+7:
+	-#18 updated values to +30% -40%
+	-moved noaxe to unused
+8:
+	-added Pickup
+9:
+	-fixed meow.json
+	-changed the way pickup is activated, from external activation to self action
+	-???made pickup default to extraorigins implimentation
+	--#TODO19: add waterprotection clause to Hydrophobia
+	--#TODO20: add water clause to walljump
+10:
+	-walljump affects client now. Player might slowly rise while wallgrap but better than shoddy feel
+	-attempted to fix pickup again
+	-forced fallback target to be player to align with extraorigins implimentation
+	--#20 done
+	-added creative flying clause to walljump
+	-actually fully fixxed walljump
+	-you now slide down the wall after a few seconds
+	-replaced the fall distance condition with an on ground condition
+	-Quick Attack now shows the actual value
+	-changed description of pickup
+	--#19 done
+11:
+	-changed scale from 0.625 to 0.53125 (5/8 to 17/32) to allow crouching under topside trapdoors
+	-redundant change ^ changed to 0.5 instead.
