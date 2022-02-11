@@ -1,6 +1,6 @@
 A Cat origin for personal use.<br/><br/>
 Cat<br/>
-A decendant of the common housecat, this origin sacrifices combat ability with a vast quantity of movement abilities.<br/>
+A decendant of the common housecat. Cats can be found using their natural abilities to squeeze into small, hard to reach places.<br/>
 🟢Agile: You have a wide variety of mevement options including a wall jump.<br/>
 🟢Crawl: You can crawl on the ground at the press of a button (while sprinting)<br/>
 🟢Quick Attack: You attack 30% faster.<br/>

@@ -1,6 +1,6 @@
 {
 	"name": "Cat",
-	"description": "A decendant of the common housecat, this origin sacrifices combat ability with a vast quantity of movement abilities.",
+	"description": "A decendant of the common housecat. Cats can be found using their natural abilities to squeeze into small, hard to reach places.",
 	"icon": "minecraft:salmon",
 	"impact": 2,
 	"powers": [
