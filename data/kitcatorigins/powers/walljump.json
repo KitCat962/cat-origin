@@ -146,5 +146,18 @@
 		"max":40,
 		"start_value":40,
 		"hud_render":{"should_render":false}
+	},
+	"breakspeed":{
+		"type":"origins:modify_break_speed",
+		"modifier":{
+			"operation":"multiply_base",
+			"value":4
+		},
+		"condition":{
+			"type":"origins:resource",
+			"resource":"*:walljump_timer",
+			"comparison":"!=",
+			"compare_to":0
+		}
 	}
 }
