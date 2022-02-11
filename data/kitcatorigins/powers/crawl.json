@@ -1,6 +1,6 @@
 {
 	"name": "Crawl",
-	"description": "You can crawl on the ground at the press of a button (while sprinting)",
+	"description": "You can crawl on the ground at the press of a button (while sprinting).",
 	"type": "origins:multiple",
 	"onsneak": {
 		"type": "origins:toggle",

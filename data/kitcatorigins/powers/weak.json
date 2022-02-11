@@ -1,6 +1,6 @@
 {
 	"name": "Physically Weak",
-	"description": "You deal 40% less damage",
+	"description": "You deal 40% less damage.",
 	"type": "origins:modify_damage_dealt",
 	"modifier": {
 		"operation": "multiply_base",

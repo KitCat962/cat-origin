@@ -1,6 +1,6 @@
 {
 	"name":"Lightweight",
-	"description":"You take more knockback than usual",
+	"description":"You take more knockback than usual.",
 	"type": "origins:action_when_hit",
 	"cooldown":0,
 	"hud_render":{"should_render": false},

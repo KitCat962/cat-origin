@@ -1,6 +1,6 @@
 {
 	"name": "Fishy Palate",
-	"description": "You are able to get more out of raw fish than others would",
+	"description": "You are able to get more out of raw fish than others would.",
 	"type": "origins:multiple",
 	"cod":{
 		"type": "origins:modify_food",

@@ -1,6 +1,6 @@
 {
 	"name": "Hydrophobia",
-	"description": "You fear water for no apperent reason. If it ever touches you, your visoin starts to distort",
+	"description": "You fear water for no apperent reason. If it ever touches you, your visoin starts to distort.",
 	"type": "origins:action_over_time",
 	"interval": 1,
 	"entity_action": {

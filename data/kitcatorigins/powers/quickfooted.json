@@ -1,6 +1,6 @@
 {
 	"name": "Quickfooted",
-	"description": "You are naturally faster than others",
+	"description": "You are naturally faster than others.",
 	"type": "origins:attribute",
 	"modifier": {
 		"attribute": "minecraft:generic.movement_speed",

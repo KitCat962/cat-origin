@@ -1,6 +1,6 @@
 {
 	"name": "Dark Sight",
-	"description": "Your eyes allow you to see in the dark",
+	"description": "Your eyes allow you to see in the dark.",
 	"type": "origins:night_vision",
 	"strength": 0.5,
 	"condition": {
