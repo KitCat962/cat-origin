@@ -4,6 +4,6 @@
 	"type": "origins:modify_exhaustion",
 	"modifier": {
 		"operation": "multiply_total",
-		"value": 3.0
+		"value": 2.0
 	}
 }
