@@ -32,7 +32,7 @@
 			},
 			{
 				"type":"origins:enchantment",
-				"enchantment":"origins:water_protection",
+				"enchantment":"minecraft:aqua_affinity",
 				"calculation":"sum",
 				"comparison":">=",
 				"compare_to":2,
