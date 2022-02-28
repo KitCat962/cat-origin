@@ -4,8 +4,20 @@
 	"type": "origins:night_vision",
 	"strength": 0.5,
 	"condition": {
-		"type": "origins:submerged_in",
-		"fluid": "minecraft:water",
-		"inverted": true
+		"type":"origins:or",
+		"conditions":[
+			{
+				"type": "origins:submerged_in",
+				"fluid": "minecraft:water",
+				"inverted": true
+			},
+			{
+				"type":"origins:enchantment",
+				"enchantment":"minecraft:aqua_affinity",
+				"calculation":"sum",
+				"comparison":">=",
+				"compare_to":1
+			}
+		]
 	}
 }
